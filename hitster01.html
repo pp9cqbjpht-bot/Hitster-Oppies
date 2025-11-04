@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hitster Play</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #1db954, #121212);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto;
+      color: white;
+    }
+    .card {
+      text-align: center;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      background-color: rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    button {
+      font-size: 20px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background-color: #1db954;
+      color: white;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #1ed760;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Klaar om te raden?</h1>
+    <button id="playBtn">▶ SPEEL LIEDJE</button>
+  </div>
+
+  <script>
+    const spotifyUri = "https://open.spotify.com/track/6F6S3TLKWLCedkJhrUFQ2k";
+    document.getElementById('playBtn').addEventListener('click', () => {
+      // probeer eerst de Spotify app te openen
+      window.location.href = spotifyUri;
+    });
+  </script>
+</body>
+</html>
